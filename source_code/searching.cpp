@@ -55,30 +55,3 @@ SearchResult exponentialSearch(T arr[], int n, T target) {
         return res;
     }
     
-    // Temukan jangkauan untuk binary search dengan melompat secara eksponensial
-    int i = 1;
-    while (i < n && arr[i] <= target) {
-        res.steps++;
-        std::cout << "  [Trace Search] Target kemungkinan berada setelah indeks " << i << "\n";
-        i = i * 2;
-    }
-    
-    int low = i / 2;
-    int high = std::min(i, n - 1);
-    std::cout << "  [Trace Search] Jangkauan target dipersempit ke indeks: [" << low << " sampai " << high << "]\n";
-    
-    // Lakukan Binary Search di rentang yang ditemukan
-    SearchResult bsRes = binarySearchInternal(arr, low, high, target);
-    
-    auto end = std::chrono::high_resolution_clock::now();
-    res.index = bsRes.index;
-    res.steps += bsRes.steps;
-    res.time_ms = std::chrono::duration<double, std::milli>(end - start).count();
-    
-    return res;
-}
-
-// Instansiasi Eksplisit template
-template SearchResult exponentialSearch<int>(int arr[], int n, int target);
-template SearchResult exponentialSearch<double>(double arr[], int n, double target);
-template SearchResult exponentialSearch<std::string>(std::string arr[], int n, std::string target);
