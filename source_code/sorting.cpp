@@ -84,24 +84,3 @@ void quickSortHelper(T arr[], int low, int high, long long &comps, long long &sw
     }
 }
 
-// Fungsi Utama Quick Sort 
-template <typename T>
-SortResult quickSort(T arr[], int n, bool verbose) {
-    SortResult res = {0.0, 0, 0};
-    auto start = std::chrono::high_resolution_clock::now();
-    
-    quickSortHelper(arr, 0, n - 1, res.comparisons, res.swaps, verbose, n);
-    
-    auto end = std::chrono::high_resolution_clock::now();
-    res.time_ms = std::chrono::duration<double, std::milli>(end - start).count();
-    return res;
-}
-
-// Instansiasi Eksplisit agar template dapat di-link antar file cpp
-template SortResult quickSort<int>(int arr[], int n, bool verbose);
-template SortResult quickSort<double>(double arr[], int n, bool verbose);
-template SortResult quickSort<std::string>(std::string arr[], int n, bool verbose);
-
-template SortResult bubbleSort<int>(int arr[], int n);
-template SortResult bubbleSort<double>(double arr[], int n);
-template SortResult bubbleSort<std::string>(std::string arr[], int n);
