@@ -36,3 +36,22 @@ SearchResult binarySearchInternal(T arr[], int low, int high, T target) {
     return res;
 }
 
+// Implementasi Exponential Search Mandiri
+template <typename T>
+SearchResult exponentialSearch(T arr[], int n, T target) {
+    SearchResult res = {-1, 0, 0.0};
+    auto start = std::chrono::high_resolution_clock::now();
+    
+    if (n == 0) {
+        res.index = -1;
+        return res;
+    }
+    
+    res.steps++;
+    if (arr[0] == target) {
+        res.index = 0;
+        auto end = std::chrono::high_resolution_clock::now();
+        res.time_ms = std::chrono::duration<double, std::milli>(end - start).count();
+        return res;
+    }
+    
