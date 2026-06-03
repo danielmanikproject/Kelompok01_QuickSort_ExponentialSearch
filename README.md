@@ -1,11 +1,10 @@
-=======================================================
 TUGAS PROYEK STRUKTUR DATA - KELOMPOK 01 KELAS PTIK-C 2025
-=======================================================
-Topik: Quick Sort & Exponential Search
-Studi Kasus: Data Transaksi Retail (data.csv)
-Kelas : PTIK-C 2025
-Dosen Pengampu : Bapak Ali Akbar Lubis, S.Kom., M.T.I.
-Anggota Kelompok: 
+
+- Topik: Quick Sort & Exponential Search
+- Studi Kasus: Data Transaksi Retail (data.csv)
+- Kelas : PTIK-C 2025
+- Dosen Pengampu : Bapak Ali Akbar Lubis, S.Kom., M.T.I.
+- Anggota Kelompok: 
 1. CHESSA RUTH OLIVIA PANGARIBUAN (5253151023)
 2. DANIEL VIDIARGA MANIK (5253151015)
 3. FADHIL SATRIA ZEBUA (5253151005)
@@ -34,6 +33,5 @@ CARA MENJALANKAN PROGRAM:
 - Pada OS Mac/Linux   : Ketik './main' lalu tekan Enter.
 
 CARA MEMBERSIHKAN FILE KOMPILASI (OPSIONAL):
-Jika Anda ingin menghapus file .o dan .exe yang terbuat secara otomatis saat kompilasi, jalankan perintah:
+- Jika Anda ingin menghapus file .o dan .exe yang terbuat secara otomatis saat kompilasi, jalankan perintah:
 make clean
-=======================================================
